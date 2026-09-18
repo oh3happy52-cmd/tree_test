@@ -181,12 +181,7 @@ int valid_path(const char *path)
 }
 
 
-/*
- * 경로를 이용하여 노드 검색
- *
- * 예: /A/B/C
- * 루트 A부터 시작하여 B, C 순서로 이동한다.
- */
+
 Node *find_node(Node *root, const char *path)
 {
     Node *current;
