@@ -32,8 +32,8 @@ int stackTop = -1;
 // ---- 부모 스택 push/pop ----
 void pushParent(char parentChar) {
     stackTop++;
-    parentStack[stackTop] = parentChar;
-    childCountStack[stackTop] = 0;
+    parentStack[stackTop] = parentChar;  // 부모스택  0에 a가 들어감
+    childCountStack[stackTop] = 0; // 0 이 들어가고 
 }
 
 void popParent() {
@@ -42,7 +42,7 @@ void popParent() {
 
 // ---- C의 자식을 저장하는 스택 push ----
 void pushChildOfC(char childChar) {
-    if (childrenOfCTop < MAX_CHILDREN - 1) {
+    if (childrenOfCTop < MAX_CHILDREN - 1) { // 99보다 작은경우 자식 +1, 자식
         childrenOfCTop++;
         childrenOfCStack[childrenOfCTop] = childChar;
     }
